@@ -97,7 +97,7 @@ public class ClassicPluginStrategy implements PluginStrategy {
     /**
      * All the plugins eventually delegate this classloader to load core, servlet APIs, and SE runtime.
      */
-    private final MaskingClassLoader coreClassLoader = new MaskingClassLoader(getClass().getClassLoader());
+    private final MaskingClassLoader coreClassLoader = new MaskingClassLoader(getClass().getClassLoader()).loadLibraryMasks("libraries.list");
 
     public ClassicPluginStrategy(PluginManager pluginManager) {
         this.pluginManager = pluginManager;

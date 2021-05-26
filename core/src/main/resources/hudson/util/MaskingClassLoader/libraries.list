@@ -1,0 +1,2 @@
+#maven "group:artifact" of libraries to mask in core from plugins
+com.google.guava:guava
